@@ -1,0 +1,1 @@
+ANIMALS_DIR="./animals/"
