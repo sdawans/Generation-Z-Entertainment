@@ -23,7 +23,7 @@ class MediaButton(Button):
     def set_sound(self, sound):
         self.sound = sound
 
-class Kidsmediaplayer(FloatLayout):
+class Animalsmediaplayer(FloatLayout):
     def __init__(self, app):
         self.last_media = None
         self.app = app
@@ -40,7 +40,7 @@ class Kidsmediaplayer(FloatLayout):
             value.starttime = time.time()
             mixer.music.play()
 
-class KidsmediaplayerApp(App):
+class AnimalsmediaplayerApp(App):
     mixer.init()
     # List of animals based on subdirectories in the animals folder
     # Ignore anything that's not a directory.
@@ -72,7 +72,7 @@ class KidsmediaplayerApp(App):
         return
 
     def build(self):
-        root = Kidsmediaplayer(self)
+        root = Animalsmediaplayer(self)
         even = True #Override every other button
         for media in root.children[0].children:
             media.played = True
@@ -81,4 +81,4 @@ class KidsmediaplayerApp(App):
         return root
 
 if __name__ == '__main__':
-    KidsmediaplayerApp().run()
+    AnimalsmediaplayerApp().run()
